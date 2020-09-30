@@ -1,14 +1,47 @@
-#include<stdio.h>
-Void main()
-{
+#include <stdio.h>
+int main() {
+    char operator;
+    double first, second;
+    printf("Enter an operator (+, -, *,): ");
+    scanf("%c", &operator);
+    printf("Enter two operands: ");
+    scanf("%lf %lf", &first, &second);
 
-int x,y,res;
+    switch (operator) {
+    case '+':
+        printf("%.1lf + %.1lf = %.1lf", first, second, first + second);
+        break;
+    case '-':
+        printf("%.1lf - %.1lf = %.1lf", first, second, first - second);
+        break;
+    case '*':
+        printf("%.1lf * %.1lf = %.1lf", first, second, first * second);
+        break;
+    case '/':
+        printf("%.1lf / %.1lf = %.1lf", first, second, first / second);
+        break;
+        // operator doesn't match any case constant
+    default:
+        printf("Error! operator is not correct");
+    }
 
-printf("value of x & y");
-scanf("%d%d",&x,&y):
-res=x+y;
-
-printf("Result=%d",res);
-
-
+    return 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+       
+
+
+
+
